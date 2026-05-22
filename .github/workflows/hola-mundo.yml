@@ -1,5 +1,5 @@
 name: hola-mundo-test
-run-name: !Estoy probando mi primer workflow en GitHub Actions
+run-name: Estoy  aprendiendo a usar GitHub Actions!
 on: [push]
 jobs:
   hola-mundo-compile:
