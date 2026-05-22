@@ -1,0 +1,6 @@
+name: hola-mundo
+on: [push]
+jobs:
+  hola-mundo-compile:
+    runs-on: ubuntu-latest
+    steps:
