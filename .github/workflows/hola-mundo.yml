@@ -1,11 +1,11 @@
-name: hola-mundo
+name: hola-mundo-test
 on: [push]
 jobs:
   hola-mundo-compile:
     runs-on: ubuntu-latest
     steps: 
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Definir una variable de entorno
       run: echo "HOLA_MUNDO=Hola Mundo" >> $GITHUB_ENV
     - name: Run hola-mundo
