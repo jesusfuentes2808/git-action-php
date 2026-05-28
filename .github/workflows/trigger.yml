@@ -4,7 +4,7 @@ on:
     branches:
       - 'feature_test/*'
     paths:
-      - '**.js'
+      - '**/*.js'
   pull_request:
     types:
       - opened # se ejcuta por primera vez
@@ -12,7 +12,7 @@ on:
     branches: # sobre que rama quiero que se active
       - 'main'
     paths:
-      - '**.js'
+      - '**/*.js'
 jobs:
   hola-mundo-compile:
     runs-on: ubuntu-latest
@@ -23,7 +23,5 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      #- name: Install dependencies
-        #run: npm install
       - name: Run script
         run: node index.js
