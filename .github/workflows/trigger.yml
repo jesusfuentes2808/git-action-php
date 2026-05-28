@@ -17,13 +17,13 @@ jobs:
   hola-mundo-compile:
     runs-on: ubuntu-latest
     steps:
-    - name: Clonar Repo en el Runner
-      uses: actions/checkout@v4
-    - name: Setup Node .js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
-    #- name: Install dependencies
-      #run: npm install
-    - name: Run script
-      run: node index.js
+      - name: Clonar Repo en el Runner
+        uses: actions/checkout@v4
+      - name: Setup Node .js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      #- name: Install dependencies
+        #run: npm install
+      - name: Run script
+        run: node index.js
