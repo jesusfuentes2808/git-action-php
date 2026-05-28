@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
     - name: Definir una variable de entorno
-      run: echo "HOLA_MUNDO=Hola Mundo" >> $GITHUB_ENV
+      run: echo "HOLA_MUNDO=Hola Mundo desde env" >> $GITHUB_ENV
     - name: Run hola-mundo
       run: php index.php
