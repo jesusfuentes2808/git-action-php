@@ -1,0 +1,29 @@
+name: hola-mundo-trigger
+on:
+  push:
+    branches:
+      - 'feature_test/*'
+    paths:
+      - '**.js'
+  pull_request:
+    types:
+      - opened # se ejcuta por primera vez
+      - labeled # se ejecuta cuando alguien le agrega una etiqueta el pull_request
+    branches: # sobre que rama quiero que se active
+      - 'main'
+    paths:
+      - '**.js'
+jobs:
+  hola-mundo-compile:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clonar Repo en el Runner
+      uses: actions/checkout@v4
+    - name: Setup Node .js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+    #- name: Install dependencies
+      #run: npm install
+    - name: Run script
+      run: node index.js
