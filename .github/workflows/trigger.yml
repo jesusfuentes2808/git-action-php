@@ -1,6 +1,24 @@
 name: hola-mundo-trigger
 
 on:
+  push:
+    branches:
+      - 'feature_test/*'
+    paths:
+      - '**/*.js'
+
+  pull_request:
+    types:
+      - opened
+      - labeled
+    branches:
+      - 'main'
+    paths:
+      - '**/*.js'
+
+  schedule:
+    - cron: '15 22 * * *'
+
   workflow_dispatch:
     inputs:
       posicion:
