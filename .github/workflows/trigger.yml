@@ -27,7 +27,6 @@ jobs:
           node-version: 20
       - name: Run script
         run: node index.js
-      
       - name: Expresión con funciones
         run: |
           echo "El repositorio es: ${{ github.repository }}"
