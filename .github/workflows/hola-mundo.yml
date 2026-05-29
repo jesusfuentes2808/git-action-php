@@ -1,22 +1,22 @@
-#name: hola-mundo-test
-#run-name: Estoy  aprendiendo a usar GitHub Actions!
-#on: [push]
-#jobs:
-#  hola-mundo-compile:
-#    runs-on: ubuntu-latest
-#    steps: 
-#    - name: Checkout
-#      uses: actions/checkout@v3
-#    - name: Definir una variable de entorno
-#      run: echo "HOLA_MUNDO=Hola Mundo desde env" >> $GITHUB_ENV
-#    - name: Run hola-mundo
-#      run: php index.php
-name: hola-mundo-trigger
-run-name: Estoy  aprendiendo a usar GitHub Actions con Triggers!
-on:
-  push:
-    branches:
-      - main
-      -'release/*'
-    paths:
-      - '**.js'
+name: hola-mundo-test
+run-name: Estoy  aprendiendo a usar GitHub Actions!
+on: [push]
+jobs:
+  hola-mundo-compile:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Definir una variable de entorno
+      run: echo "HOLA_MUNDO=Hola Mundo desde env" >> $GITHUB_ENV
+    - name: Run hola-mundo
+      run: php index.php
+#name: hola-mundo-trigger
+#run-name: Estoy  aprendiendo a usar GitHub Actions con Triggers!
+#on:
+#  push:
+#    branches:
+#      - main
+#      -'release/*'
+#    paths:
+#      - '**.js'
