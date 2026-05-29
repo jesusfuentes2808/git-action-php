@@ -51,8 +51,8 @@ jobs:
           echo "Repositorio ANTIGUO: ${{ github.repository }}"
           echo "Actor: ${{ github.actor }}"
           echo "Evento: ${{ github.event_name }}"
-    hola-mundo-compile-new:
-    if: ${{ inputs.antiguedad <= 2 }}
+  hola-mundo-compile-new:
+    if: ${{ inputs.antiguedad > 2 }}
     runs-on: ubuntu-latest
 
     steps:
