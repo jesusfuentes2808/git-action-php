@@ -13,6 +13,8 @@ on:
       - 'main'
     paths:
       - '**/*.js'
+  schedule:
+    - cron: '15 22 * * *' # se ejecuta todos los días a las 22:15 horas 
 jobs:
   hola-mundo-compile:
     runs-on: ubuntu-latest
@@ -25,3 +27,9 @@ jobs:
           node-version: 20
       - name: Run script
         run: node index.js
+      
+      - name: Expresión con funciones
+        run: |
+          echo "El repositorio es: ${{ github.repository }}"
+          echo "El actor que ejecutó el workflow es: ${{ github.actor }}"
+          echo "Fecha actual: ${{ github.event.head_commit.timestamp || 'No disponible' }}"
