@@ -1,0 +1,16 @@
+name: Reto 5 - Aprende a usar las Variables de Entorno
+on: [push, pull_request]
+env:
+  fruta1: Manzana
+  fruta2: Pera
+  fruta3: Frutilla
+jobs:
+  saludo-variables:
+    runs-on: ubuntu-latest
+    env:
+        SALUDO: Hola
+    steps:
+      - name: echo frutas mix
+        run: echo "Saludo $SALUDO $NOMBRE, la $fruta1 es roja, la $fruta2 es verde, la $fruta3 es roja y el ${{ vars.FRUTA4 }} es amarillo"
+        env:
+            NOMBRE: Jesus
