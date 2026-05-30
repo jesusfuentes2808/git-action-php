@@ -11,6 +11,6 @@ jobs:
         SALUDO: Hola
     steps:
       - name: echo frutas mix
-        run: echo "Saludo $SALUDO $NOMBRE ${{ vars.NOMBRE_GH }} | secret: ${{ env.NEW_SECRET }}, la $fruta1 es roja, la $fruta2 es verde, la $fruta3 es roja y el ${{ vars.FRUTA4 }}  es amarillo"
+        run: echo "Secret ${{ secrets.NEW_SECRET }} | Saludo $SALUDO $NOMBRE ${{ vars.NOMBRE_GH }} | , la $fruta1 es roja, la $fruta2 es verde, la $fruta3 es roja y el ${{ vars.FRUTA4 }} es amarillo"
         env:
             NOMBRE: Jesus
